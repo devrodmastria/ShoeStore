@@ -27,6 +27,6 @@ The latest version of this app was developed with help from:
   * Official Android documentation
   * hints provided by the IDE
   * reviewing the rubric
-  
+  * custom colors obtained from [Material Design](https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=009688) website  
 
 
