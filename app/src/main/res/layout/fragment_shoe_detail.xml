@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ShoeDetailFragment">
+
+    <data>
+        <variable
+            name="shoeListViewModel"
+            type="com.udacity.shoestore.shoe_gallery.ShoeListViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/list_view_margin_horizontal"
+        android:layout_marginTop="16dp">
+
+        <!--
+            *** Accessibility attributes:
+            *** all text colors set to Dark to enhance visibility/higher contrast on white background.
+            *** all input fields contain a minHeight="48dp"
+            *** layout compatible with landscape and portrait mode.
+        -->
+
+        <TextView
+            android:id="@+id/shoeInfo"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/shoe_detail_heading_label"
+            android:textColor="@color/darkText"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--
+            *** In the TextViews below, I used a Vertical Chain to line up all 4 shoe fields with equal spacing above/below each TextView.
+            *** I also Aligned by Left Edges on all TextViews for a cleaner look.
+        -->
+
+        <TextView
+            android:id="@+id/shoeNameDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/name_label"
+            android:textColor="@color/darkText"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/textView6"
+            app:layout_constraintStart_toStartOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/shoeInfo" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/size_label"
+            android:textColor="@color/darkText"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/textView7"
+            app:layout_constraintStart_toStartOf="@+id/textView7"
+            app:layout_constraintTop_toBottomOf="@+id/shoeNameDetail" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/brand_label"
+            android:textColor="@color/darkText"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/textView8"
+            app:layout_constraintStart_toStartOf="@+id/textView8"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/description_label"
+            android:textColor="@color/darkText"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+        <!--
+            *** In the EditText views below, I used a Vertical Chain to line up all 4 input forms with equal spacing above/below each one.
+            *** I also Aligned by Left Edges on all fields for a consistent shape.
+        -->
+
+        <EditText
+            android:id="@+id/editShoeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/enter_shoe_name"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textColorHint="@color/darkText"
+            app:layout_constraintBottom_toTopOf="@+id/editSize"
+            app:layout_constraintStart_toStartOf="@+id/editSize"
+            app:layout_constraintTop_toBottomOf="@+id/shoeInfo" />
+
+        <EditText
+            android:id="@+id/editSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:hint="@string/enter_shoe_size"
+            android:textColorHint="@color/darkText"
+            app:layout_constraintBottom_toTopOf="@+id/editBrand"
+            app:layout_constraintStart_toStartOf="@+id/editBrand"
+            app:layout_constraintTop_toBottomOf="@+id/editShoeName" />
+
+        <EditText
+            android:id="@+id/editBrand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:hint="@string/enter_shoe_brand"
+            android:textColorHint="@color/darkText"
+            app:layout_constraintBottom_toTopOf="@+id/editDescription"
+            app:layout_constraintStart_toStartOf="@+id/editDescription"
+            app:layout_constraintTop_toBottomOf="@+id/editSize" />
+
+        <EditText
+            android:id="@+id/editDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:hint="@string/enter_brief_description"
+            android:textColorHint="@color/darkText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/shoeInfo"
+            app:layout_constraintTop_toBottomOf="@+id/editBrand" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
