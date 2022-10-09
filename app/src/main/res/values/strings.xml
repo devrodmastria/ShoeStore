@@ -8,7 +8,7 @@
     <string name="login_button">Login</string>
 
     <!--    welcome screen-->
-    <string name="welcome_label">Welcome to\nThe Purple Shoe inventory!</string>
+    <string name="welcome_label">Welcome to\nThe Purple Store inventory!</string>
     <string name="welcome_subheading_label">Shoes for every terrain</string>
     <string name="dirty_design_credits">purple design by Rod Mesquita\nfor Udacity nanodegree</string>
     <string name="onboarding_explore_label">Explore!</string>
