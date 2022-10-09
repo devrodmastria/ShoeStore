@@ -26,17 +26,6 @@ class MainActivity : AppCompatActivity() {
         viewModel = ViewModelProvider(this).get(ShoeListViewModel::class.java)
         binding.shoeListViewModel = viewModel
 
-//        val navHostFragment = supportFragmentManager.findFragmentById(R.id.mainNavHostFragment) as NavHostFragment
-//        val navController = navHostFragment.navController
-//        NavigationUI.setupActionBarWithNavController(this, navController)
-
-//        navController.addOnDestinationChangedListener { navControl: NavController, navDest: NavDestination, args: Bundle? ->
-//            val fragId = navControl.currentDestination?.label
-//            if (fragId == "shoeListFragment") {
-//                Timber.wtf("-->> Shoe Item %s", fragId)
-//            }
-//        }
-
     }
 
 }

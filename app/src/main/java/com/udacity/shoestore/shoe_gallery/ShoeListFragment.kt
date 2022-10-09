@@ -71,13 +71,16 @@ class ShoeListFragment : Fragment() {
     }
 
     private fun generateShoeItemLayout(shoe: Shoe): View {
+
+        val textString = "${shoe.name} * ${shoe.size} * ${shoe.company} * ${shoe.description}"
+
         val textView = TextView(binding.root.context)
-        textView.text = shoe.name
+        textView.text = textString
         textView.textSize = 20F
         textView.setTextColor(resources.getColor(R.color.darkText, resources.newTheme()))
 
-        val layoutDetails = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 120)
-
+        // layout height allows enough space for two lines, if needed
+        val layoutDetails = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 140)
         textView.layoutParams = layoutDetails
 
         return textView

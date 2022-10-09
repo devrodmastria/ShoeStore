@@ -16,8 +16,8 @@
     <!--    instructions -->
     <string name="instructions_heading">Instructions</string>
     <string name="step_1">Step 1 - Review Existing Items</string>
-    <string name="step_2">Step 2 - Add New Product Details</string>
-    <string name="step_3">Step 3 - Save to Inventory</string>
+    <string name="step_2">Step 2 - Click (+) to Add Shoe</string>
+    <string name="step_3">Step 3 - Add New Product &amp; Save</string>
     <string name="instructions_button_label">Get Started</string>
 
     <!--   inventory list screen -->

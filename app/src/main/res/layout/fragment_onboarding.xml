@@ -12,30 +12,35 @@
             *** The first TextView works as the anchor for the views below.
             *** TextViews are organized to be centered vertically.
         -->
+
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp"
+            android:layout_marginBottom="8dp"
             android:text="@string/welcome_label"
             android:textAlignment="center"
             android:textColor="@color/purple_500"
             android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/button2"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             android:text="@string/welcome_subheading_label"
+            android:textColor="@android:color/holo_green_dark"
             android:textSize="24sp"
             android:textStyle="italic"
-            android:textColor="@android:color/holo_green_dark"
+            app:layout_constraintBottom_toTopOf="@+id/textView5"
             app:layout_constraintEnd_toEndOf="@+id/textView2"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/textView2"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -43,11 +48,12 @@
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:text="@string/dirty_design_credits"
-            android:textColor="@color/darkText"
             android:textAlignment="center"
+            android:textColor="@color/darkText"
+            app:layout_constraintBottom_toTopOf="@+id/button2"
             app:layout_constraintEnd_toEndOf="@+id/textView"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/textView"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -59,11 +65,11 @@
             android:layout_width="@dimen/onboarding_button_width"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
+            android:background="@color/purple_300"
             android:text="@string/onboarding_explore_label"
             android:textAllCaps="false"
-            android:textSize="20sp"
             android:textColor="@android:color/white"
-            android:background="@color/purple_300"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/textView2"
             app:layout_constraintStart_toStartOf="@+id/textView2" />
