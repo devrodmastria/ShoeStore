@@ -6,8 +6,8 @@
 
     <data>
         <variable
-            name="shoeListViewModel"
-            type="com.udacity.shoestore.shoe_gallery.ShoeListViewModel" />
+            name="shoeModel"
+            type="com.udacity.shoestore.models.Shoe" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -98,6 +98,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:text="@={shoeModel.name}"
             android:hint="@string/enter_shoe_name"
             android:importantForAutofill="no"
             android:inputType="text"
@@ -112,10 +113,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="@string/enter_shoe_size"
+            android:text="@{shoeModel.size == 0.0 ? @string/enter_shoe_size : String.valueOf(shoeModel.size)}"
             android:importantForAutofill="no"
             android:inputType="number"
             android:minHeight="48dp"
-            android:hint="@string/enter_shoe_size"
             android:textColorHint="@color/darkText"
             app:layout_constraintBottom_toTopOf="@+id/editBrand"
             app:layout_constraintStart_toStartOf="@+id/editBrand"
@@ -130,6 +132,7 @@
             android:inputType="text"
             android:minHeight="48dp"
             android:hint="@string/enter_shoe_brand"
+            android:text="@={shoeModel.company}"
             android:textColorHint="@color/darkText"
             app:layout_constraintBottom_toTopOf="@+id/editDescription"
             app:layout_constraintStart_toStartOf="@+id/editDescription"
@@ -144,6 +147,7 @@
             android:inputType="text"
             android:minHeight="48dp"
             android:hint="@string/enter_brief_description"
+            android:text="@={shoeModel.description}"
             android:textColorHint="@color/darkText"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/shoeInfo"
